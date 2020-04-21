@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+
+  ],
+  "key": {
+    "#": {
+      "item": "randommod2:sapphire"
+    }
+  },
+  "result": {
+    "randommod2": "sapphire_block"
+  }
+}

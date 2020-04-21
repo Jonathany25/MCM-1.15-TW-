@@ -28,9 +28,14 @@ public class ItemInit
 {
     //Items
     public static final Item ruby = null;
+    public static final Item ruby_dust = null;
     public static final Item sapphire = null;
+    public static final Item sapphire_dust = null;
     public static final Item ruby_sapphire_gem = null;
+    public static final Item ruby_sapphire_dust = null;
     public static final Item invisibility_mirror = null;
+    public static final Item obsidian_rod = null;
+    public static final Item reinforced_obsidian_rod = null;
 
     //Tools
     public static final Item ruby_sword = null;
@@ -71,10 +76,15 @@ public class ItemInit
         event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)).setRegistryName("ruby"));
         event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)).setRegistryName("sapphire"));
         event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)).setRegistryName("ruby_sapphire_gem"));
+        event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)).setRegistryName("ruby_dust"));
+        event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)).setRegistryName("sapphire_dust"));
+        event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)).setRegistryName("ruby_sapphire_dust"));
         event.getRegistry().register(new InvisibilityRing(new Item.Properties().group(RandomMod2.ToolTab.instance).maxStackSize(1))
                 .setRegistryName("invisibility_mirror"));
         event.getRegistry().register(new PlasticBottle(new Item.Properties().group(RandomMod2.ItemTab.instance).maxStackSize(64))
                 .setRegistryName("plastic_bottle"));
+        event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)).setRegistryName("obsidian_rod"));
+        event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)).setRegistryName("reinforced_obsidian_rod"));
 
         //Food
         event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance).food(new Food.Builder().hunger(1).saturation(10f).setAlwaysEdible().meat()

@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "R R",
+        "R R"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "randommod2:ruby_sapphire_gem"
+        }
+    },
+   
+    "result":
+    {
+        "item": "randommod2:ruby_sapphire_boots",
+        "count": 1
+    }
+}

@@ -3,7 +3,12 @@
   "item.randommod2.ruby": "Ruby",
   "item.randommod2.sapphire": "Sapphire",
   "item.randommod2.ruby_sapphire_gem": "Ruby Sapphire Gem",
+  "item.randommod2.ruby_dust": "Ruby Dust",
+  "item.randommod2.sapphire_dust": "Sapphire Dust",
+  "item.randommod2.ruby_sapphire_dust": "Ruby Sapphire Dust",
   "item.randommod2.beer": "Beer",
+  "item.randommod2.obsidian_rod": "Obsidian Rod",
+  "item.randommod2.reinforced_obsidian_rod": "Reinforced_Obsidian Rod",
 
   //Tools
   "item.randommod2.ruby_sword": "Ruby Sword",
@@ -25,7 +30,7 @@
   "item.randommod2.plastic_bottle": "Plastic Bottle",
 
   //Blocks
-  "block.randommod2.sapphire_block": "Sapphire Block",
+  "block.randommod2.sapphsire_block": "Sapphire Block",
   "block.randommod2.ruby_block": "Ruby Block",
   "block.randommod2.ruby_sapphire_block": "Ruby Sapphire Block",
   "block.randommod2.sapphire_ore": "Sapphire Ore",

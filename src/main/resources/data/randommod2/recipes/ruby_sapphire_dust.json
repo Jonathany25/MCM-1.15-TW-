@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shapeless",
+ 
+    "ingredients":
+    [
+ 
+    {
+      "item": "randommod2:ruby_dust"
+    },
+    {
+      "item": "randommod2:sapphire_dust"
+    }
+ 
+    ],
+ 
+    "result":
+    {
+        "item": "randommod2:ruby_sapphire_dust",
+        "count": 2
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "RR ",
+        "RS ",
+        " S "
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "randommod2:sapphire"
+        },
+        
+        "S":
+        {
+            "item": "randommod2:obsidian_rod"
+        }
+    },
+   
+    "result":
+    {
+        "item": "randommod2:sapphire_axe",
+        "count": 1
+    }
+}

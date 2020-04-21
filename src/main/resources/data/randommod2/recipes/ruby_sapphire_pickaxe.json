@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "RRR",
+        " S ",
+        " S "
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "randommod2:ruby_sapphire_gem"
+        },
+        
+        "S":
+        {
+            "item": "randommod2:reinforced_obsidian_rod"
+        }
+    },
+   
+    "result":
+    {
+        "item": "randommod2:ruby_sapphire_pickaxe",
+        "count": 1
+    }
+}

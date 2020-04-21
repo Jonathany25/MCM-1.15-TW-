@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group" : "sticks",
+    "pattern": [
+        "#",
+        "#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:obsidian"
+        }
+    },
+    "result": {
+        "item": "randommod2:obsidian_rod",
+        "count": 4
+    }
+}

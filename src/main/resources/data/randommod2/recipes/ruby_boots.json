@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+   
+    "pattern":
+    [
+        "R R",
+        "R R"
+    ],
+   
+    "key":
+    {
+        "R":
+        {
+            "item": "randommod2:ruby"
+        }
+    },
+   
+    "result":
+    {
+        "item": "randommod2:ruby_boots",
+        "count": 1
+    }
+}
