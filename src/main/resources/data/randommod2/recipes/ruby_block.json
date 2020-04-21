@@ -12,6 +12,7 @@
     }
   },
   "result": {
-    "randommod2": "ruby_block"
+    "randommod2": "ruby_block",
+    "count": 1
   }
 }
