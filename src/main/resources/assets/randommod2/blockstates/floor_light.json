@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "randommod2:block/floor_light" },
+    "facing=south": { "model": "randommod2:block/floor_light", "y": 180 },
+    "facing=west":  { "model": "randommod2:block/floor_light", "y": 270 },
+    "facing=east":  { "model": "randommod2:block/floor_light", "y": 90 }
+  }
+}

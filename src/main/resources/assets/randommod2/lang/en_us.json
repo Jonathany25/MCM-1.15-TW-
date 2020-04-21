@@ -1,0 +1,60 @@
+{
+  //Items
+  "item.randommod2.ruby": "Ruby",
+  "item.randommod2.sapphire": "Sapphire",
+  "item.randommod2.ruby_sapphire_gem": "Ruby Sapphire Gem",
+  "item.randommod2.beer": "Beer",
+
+  //Tools
+  "item.randommod2.ruby_sword": "Ruby Sword",
+  "item.randommod2.ruby_axe": "Ruby Axe",
+  "item.randommod2.ruby_pickaxe": "Ruby Pickaxe",
+  "item.randommod2.ruby_shovel": "Ruby Shovel",
+  "item.randommod2.ruby_hoe": "Ruby Hoe",
+  "item.randommod2.sapphire_sword": "Sapphire Sword",
+  "item.randommod2.sapphire_axe": "Sapphire Axe",
+  "item.randommod2.sapphire_pickaxe": "Sapphire Pickaxe",
+  "item.randommod2.sapphire_shovel": "Sapphire Shovel",
+  "item.randommod2.sapphire_hoe": "Sapphire Hoe",
+  "item.randommod2.ruby_sapphire_sword": "Ruby Sapphire Sword",
+  "item.randommod2.ruby_sapphire_axe": "Ruby Sapphire Axe",
+  "item.randommod2.ruby_sapphire_pickaxe": "Ruby Sapphire Pickaxe",
+  "item.randommod2.ruby_sapphire_shovel": "Ruby Sapphire Shovel",
+  "item.randommod2.ruby_sapphire_hoe": "Ruby Sapphire Hoe",
+  "item.randommod2.invisibility_mirror": "Mirror of Invisibility",
+  "item.randommod2.plastic_bottle": "Plastic Bottle",
+
+  //Blocks
+  "block.randommod2.sapphire_block": "Sapphire Block",
+  "block.randommod2.ruby_block": "Ruby Block",
+  "block.randommod2.ruby_sapphire_block": "Ruby Sapphire Block",
+  "block.randommod2.sapphire_ore": "Sapphire Ore",
+  "block.randommod2.ruby_ore": "Ruby Ore",
+  "block.randommod2.friends_ore": "Ore of Friendship",
+  "block.randommod2.floor_light": "Floor Light",
+  "block.randommod2.endsapphire_ore": "End Sapphire Ore",
+  "block.randommod2.endruby_ore": "End Ruby Ore",
+  "block.randommod2.nethersapphire_ore": "Nether Sapphire Ore",
+  "block.randommod2.netherruby_ore": "Nether Ruby Ore",
+
+  //Armor
+  "item.randommod2.ruby_helmet": "Ruby Helmet",
+  "item.randommod2.ruby_chestplate": "Ruby Chestplate",
+  "item.randommod2.ruby_leggings": "Ruby Leggings",
+  "item.randommod2.ruby_boots": "Ruby Boots",
+  "item.randommod2.sapphire_helmet": "Sapphire Helmet",
+  "item.randommod2.sapphire_chestplate": "Sapphire Chestplate",
+  "item.randommod2.sapphire_leggings": "Sapphire Leggings",
+  "item.randommod2.sapphire_boots": "Sapphire Boots",
+  "item.randommod2.ruby_sapphire_helmet": "Ruby Sapphire Helmet",
+  "item.randommod2.ruby_sapphire_chestplate": "Ruby Sapphire Chestplate",
+  "item.randommod2.ruby_sapphire_leggings": "Ruby Sapphire Leggings",
+  "item.randommod2.ruby_sapphire_boots": "Ruby Sapphire Boots",
+
+
+  //Tabs
+  "itemGroup.itemtab": "Random Mod 2: Items",
+  "itemGroup.blocktab": "Random Mod 2: Blocks",
+  "itemGroup.tooltab": "Random Mod 2: Tool",
+  "itemGroup.armortab": "Random Mod 2: Armor"
+}

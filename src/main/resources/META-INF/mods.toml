@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+issueTrackerURL="http://my..tracker/"
+[[mods]]
+modId="randommod2"
+version="1.0.0"
+displayName="Random Mod 2"
+updateJSONURL="http://myurl.me/"
+displayURL="http://example.com/"
+logoFile="examplemod.png"
+credits="To my friends"
+authors="Jonathan"  
+description='''
+Mod I made for fun
+'''
+[[dependencies.randommod2]]
+    modId="forge"
+    mandatory=true
+    versionRange="[31,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.randommod2]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"
