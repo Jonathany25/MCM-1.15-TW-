@@ -1,10 +1,7 @@
 package com.jonathany.randommod2.events;
 
 import com.jonathany.randommod2.RandomMod2;
-import com.jonathany.randommod2.init.BlockInit;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.living.LivingEvent;

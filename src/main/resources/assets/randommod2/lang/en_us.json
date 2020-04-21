@@ -30,7 +30,7 @@
   "item.randommod2.plastic_bottle": "Plastic Bottle",
 
   //Blocks
-  "block.randommod2.sapphsire_block": "Sapphire Block",
+  "block.randommod2.sapphire_block": "Sapphire Block",
   "block.randommod2.ruby_block": "Ruby Block",
   "block.randommod2.ruby_sapphire_block": "Ruby Sapphire Block",
   "block.randommod2.sapphire_ore": "Sapphire Ore",
@@ -41,6 +41,7 @@
   "block.randommod2.endruby_ore": "End Ruby Ore",
   "block.randommod2.nethersapphire_ore": "Nether Sapphire Ore",
   "block.randommod2.netherruby_ore": "Nether Ruby Ore",
+  "block.randommod2.quarry": "Quarry",
 
   //Armor
   "item.randommod2.ruby_helmet": "Ruby Helmet",

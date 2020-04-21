@@ -13,154 +13,106 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import java.util.Random;
 import java.util.function.Supplier;
-
-@Mod.EventBusSubscriber(modid = RandomMod2.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-@ObjectHolder(RandomMod2.MOD_ID)
 
 public class ItemInit
 {
+    public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, RandomMod2.MOD_ID);
+
     //Items
-    public static final Item ruby = null;
-    public static final Item ruby_dust = null;
-    public static final Item sapphire = null;
-    public static final Item sapphire_dust = null;
-    public static final Item ruby_sapphire_gem = null;
-    public static final Item ruby_sapphire_dust = null;
-    public static final Item invisibility_mirror = null;
-    public static final Item obsidian_rod = null;
-    public static final Item reinforced_obsidian_rod = null;
+    public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", () -> new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)));
+    public static final RegistryObject<Item> RUBY_DUST = ITEMS.register("ruby_dust", () -> new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)));
+    public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire", () -> new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_DUST = ITEMS.register("sapphire_dust", () -> new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)));
+    public static final RegistryObject<Item> RUBY_SAPPHIRE_GEM = ITEMS.register("ruby_sapphire_gem", () -> new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)));
+    public static final RegistryObject<Item> RUBY_SAPPHIRE_DUST = ITEMS.register("ruby_sapphire_dust", () -> new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)));
+    public static final RegistryObject<Item> INVISIBILITY_MIRROR = ITEMS.register("invisibility_mirror", () -> new InvisibilityRing(new Item.Properties().group(RandomMod2.ItemTab.instance)));
+    public static final RegistryObject<Item> OBSIDIAN_ROD = ITEMS.register("obsidian_rod", () -> new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)));
+    public static final RegistryObject<Item> REINFORCED_OBSIDIAN_ROD = ITEMS.register("reinforced_obsidian_rod", () -> new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)));
+    public static final RegistryObject<Item> PLASTIC_BOTTLE = ITEMS.register("plastic_bottle", () -> new PlasticBottle(new Item.Properties().group(RandomMod2.ItemTab.instance)));
+
+    //Food
+    public static final RegistryObject<Item> BEER = ITEMS.register("beer", () -> new Item(new Item.Properties().group(RandomMod2.ItemTab.instance).food(new Food.Builder().hunger(1).saturation(10f).setAlwaysEdible().meat()
+            .effect(new EffectInstance(Effects.NAUSEA,200,1), 0.8f).build())));
 
     //Tools
-    public static final Item ruby_sword = null;
-    public static final Item ruby_axe = null;
-    public static final Item ruby_pickaxe = null;
-    public static final Item ruby_hoe = null;
-    public static final Item ruby_shovel = null;
-    public static final Item sapphire_sword = null;
-    public static final Item sapphire_axe = null;
-    public static final Item sapphire_pickaxe = null;
-    public static final Item sapphire_hoe = null;
-    public static final Item sapphire_shovel = null;
-    public static final Item ruby_sapphire_sword = null;
-    public static final Item ruby_sapphire_axe = null;
-    public static final Item ruby_sapphire_pickaxe = null;
-    public static final Item ruby_sapphire_hoe = null;
-    public static final Item ruby_sapphire_shovel = null;
+    public static final RegistryObject<Item> RUBY_SWORD = ITEMS.register("ruby_sword", () -> new SwordItem(ItemInit.ItemTier.RUBY, 7, 5.0f,new Item.Properties()
+            .group(RandomMod2.ToolTab.instance)));
+    public static final RegistryObject<Item> RUBY_PICKAXE = ITEMS.register("ruby_pickaxe", () -> new PickaxeItem(ItemInit.ItemTier.RUBY, 1, 5.0f,new Item.Properties()
+            .group(RandomMod2.ToolTab.instance)));
+    public static final RegistryObject<Item> RUBY_AXE = ITEMS.register("ruby_axe", () -> new AxeItem(ItemInit.ItemTier.RUBY,8, 3.0f,new Item.Properties()
+            .group(RandomMod2.ToolTab.instance)));
+    public static final RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe", () -> new HoeItem(ItemInit.ItemTier.RUBY, 5.0f,new Item.Properties()
+            .group(RandomMod2.ToolTab.instance)));
+    public static final RegistryObject<Item> RUBY_SHOVEL = ITEMS.register("ruby_shovel", () -> new ShovelItem(ItemInit.ItemTier.RUBY, 1,5.0f,new Item.Properties()
+            .group(RandomMod2.ToolTab.instance)));
+    public static final RegistryObject<Item> RUBY_SAPPHIRE_SWORD = ITEMS.register("ruby_sapphire_sword", () -> new SwordItem(ItemInit.ItemTier.SRUBY, 7, 5.0f,new Item.Properties()
+            .group(RandomMod2.ToolTab.instance)));
+    public static final RegistryObject<Item> RUBY_SAPPHIRE_PICKAXE = ITEMS.register("ruby_sapphire_pickaxe", () -> new PickaxeItem(ItemInit.ItemTier.SRUBY, 1, 5.0f,new Item.Properties()
+            .group(RandomMod2.ToolTab.instance)));
+    public static final RegistryObject<Item> RUBY_SAPPHIRE_AXE = ITEMS.register("ruby_sapphire_axe", () -> new AxeItem(ItemInit.ItemTier.SRUBY,8, 3.0f,new Item.Properties()
+            .group(RandomMod2.ToolTab.instance)));
+    public static final RegistryObject<Item> RUBY_SAPPHIRE_HOE = ITEMS.register("ruby_sapphire_hoe", () -> new HoeItem(ItemInit.ItemTier.SRUBY, 5.0f,new Item.Properties()
+            .group(RandomMod2.ToolTab.instance)));
+    public static final RegistryObject<Item> RUBY_SAPPHIRE_SHOVEL = ITEMS.register("ruby_sapphire_shovel", () -> new ShovelItem(ItemInit.ItemTier.SRUBY, 1,5.0f,new Item.Properties()
+            .group(RandomMod2.ToolTab.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword", () -> new SwordItem(ItemInit.ItemTier.SAPPHIRE, 7, 5.0f,new Item.Properties()
+            .group(RandomMod2.ToolTab.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe", () -> new PickaxeItem(ItemInit.ItemTier.SAPPHIRE, 1, 5.0f,new Item.Properties()
+            .group(RandomMod2.ToolTab.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_AXE = ITEMS.register("sapphire_axe", () -> new AxeItem(ItemInit.ItemTier.SAPPHIRE,8, 3.0f,new Item.Properties()
+            .group(RandomMod2.ToolTab.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe", () -> new HoeItem(ItemInit.ItemTier.SAPPHIRE, 5.0f,new Item.Properties()
+            .group(RandomMod2.ToolTab.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel", () -> new ShovelItem(ItemInit.ItemTier.SAPPHIRE, 1,5.0f,new Item.Properties()
+            .group(RandomMod2.ToolTab.instance)));
 
     //Armor
-    public static final Item ruby_helmet = null;
-    public static final Item ruby_chestplate = null;
-    public static final Item ruby_leggings = null;
-    public static final Item ruby_boots = null;
-    public static final Item sapphire_helmet = null;
-    public static final Item sapphire_chestplate = null;
-    public static final Item sapphire_leggings = null;
-    public static final Item sapphire_boots = null;
-    public static final Item ruby_sapphire_helmet = null;
-    public static final Item ruby_sapphire_chestplate = null;
-    public static final Item ruby_sapphire_leggings = null;
-    public static final Item ruby_sapphire_boots = null;
-    public static final Item plastic_bottle = null;
+    public static final RegistryObject<Item> RUBY_HELMET = ITEMS.register("ruby_helmet", () -> new ArmorItem(ItemInit.ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties()
+            .group(RandomMod2.ArmorTab.instance)));
+    public static final RegistryObject<Item> RUBY_CHESTPLATE = ITEMS.register("ruby_chestplate", () -> new ArmorItem(ItemInit.ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties()
+            .group(RandomMod2.ArmorTab.instance)));
+    public static final RegistryObject<Item> RUBY_LEGGINGS = ITEMS.register("ruby_leggings", () -> new ArmorItem(ItemInit.ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties()
+            .group(RandomMod2.ArmorTab.instance)));
+    public static final RegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots", () -> new ArmorItem(ItemInit.ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties()
+            .group(RandomMod2.ArmorTab.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_RUBY_HELMET = ITEMS.register("ruby_sapphire_helmet", () -> new ArmorItem(ItemInit.ModArmorMaterial.RUBYSAPPHIRE, EquipmentSlotType.HEAD, new Item.Properties()
+            .group(RandomMod2.ArmorTab.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_RUBY_CHESTPLATE = ITEMS.register("ruby_sapphire_chestplate", () -> new ArmorItem(ItemInit.ModArmorMaterial.RUBYSAPPHIRE, EquipmentSlotType.CHEST, new Item.Properties()
+            .group(RandomMod2.ArmorTab.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_RUBY_LEGGINGS = ITEMS.register("ruby_sapphire_leggings", () -> new ArmorItem(ItemInit.ModArmorMaterial.RUBYSAPPHIRE, EquipmentSlotType.LEGS, new Item.Properties()
+            .group(RandomMod2.ArmorTab.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_RUBY_BOOTS = ITEMS.register("ruby_sapphire_boots", () -> new ArmorItem(ItemInit.ModArmorMaterial.RUBYSAPPHIRE, EquipmentSlotType.FEET, new Item.Properties()
+            .group(RandomMod2.ArmorTab.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet", () -> new ArmorItem(ItemInit.ModArmorMaterial.SAPPHIRE, EquipmentSlotType.HEAD, new Item.Properties()
+            .group(RandomMod2.ArmorTab.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate", () -> new ArmorItem(ItemInit.ModArmorMaterial.SAPPHIRE, EquipmentSlotType.CHEST, new Item.Properties()
+            .group(RandomMod2.ArmorTab.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings", () -> new ArmorItem(ItemInit.ModArmorMaterial.SAPPHIRE, EquipmentSlotType.LEGS, new Item.Properties()
+            .group(RandomMod2.ArmorTab.instance)));
+    public static final RegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots", () -> new ArmorItem(ItemInit.ModArmorMaterial.SAPPHIRE, EquipmentSlotType.FEET, new Item.Properties()
+            .group(RandomMod2.ArmorTab.instance)));
 
-
-    @SubscribeEvent
-    public static void registerItems(final RegistryEvent.Register<Item> event)
-    {   //Items
-        event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)).setRegistryName("ruby"));
-        event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)).setRegistryName("sapphire"));
-        event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)).setRegistryName("ruby_sapphire_gem"));
-        event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)).setRegistryName("ruby_dust"));
-        event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)).setRegistryName("sapphire_dust"));
-        event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)).setRegistryName("ruby_sapphire_dust"));
-        event.getRegistry().register(new InvisibilityRing(new Item.Properties().group(RandomMod2.ToolTab.instance).maxStackSize(1))
-                .setRegistryName("invisibility_mirror"));
-        event.getRegistry().register(new PlasticBottle(new Item.Properties().group(RandomMod2.ItemTab.instance).maxStackSize(64))
-                .setRegistryName("plastic_bottle"));
-        event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)).setRegistryName("obsidian_rod"));
-        event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)).setRegistryName("reinforced_obsidian_rod"));
-
-        //Food
-        event.getRegistry().register(new Item(new Item.Properties().group(RandomMod2.ItemTab.instance).food(new Food.Builder().hunger(1).saturation(10f).setAlwaysEdible().meat()
-                .effect(new EffectInstance(Effects.NAUSEA,200,1), 0.8f).build())).setRegistryName("beer"));
-
-        //Tools
-        event.getRegistry().register(new SwordItem(ItemTier.RUBY, 7, 5.0f,new Item.Properties()
-                .group(RandomMod2.ToolTab.instance)).setRegistryName("ruby_sword"));
-        event.getRegistry().register(new PickaxeItem(ItemTier.RUBY, 1, 5.0f,new Item.Properties()
-                .group(RandomMod2.ToolTab.instance)).setRegistryName("ruby_pickaxe"));
-        event.getRegistry().register(new AxeItem(ItemTier.RUBY,8, 3.0f,new Item.Properties()
-                .group(RandomMod2.ToolTab.instance)).setRegistryName("ruby_axe"));
-        event.getRegistry().register(new HoeItem(ItemTier.RUBY, 5.0f,new Item.Properties().group(RandomMod2.ToolTab.instance)).setRegistryName("ruby_hoe"));
-        event.getRegistry().register(new ShovelItem(ItemTier.RUBY, 1,5.0f,new Item.Properties()
-                .group(RandomMod2.ToolTab.instance)).setRegistryName("ruby_shovel"));
-        event.getRegistry().register(new SwordItem(ItemTier.SAPPHIRE, 7, 5.0f,new Item.Properties()
-                .group(RandomMod2.ToolTab.instance)).setRegistryName("sapphire_sword"));
-        event.getRegistry().register(new PickaxeItem(ItemTier.SAPPHIRE, 1, 5.0f,new Item.Properties()
-                .group(RandomMod2.ToolTab.instance)).setRegistryName("sapphire_pickaxe"));
-        event.getRegistry().register(new AxeItem(ItemTier.SAPPHIRE,8, 3.0f,new Item.Properties()
-                .group(RandomMod2.ToolTab.instance)).setRegistryName("sapphire_axe"));
-        event.getRegistry().register(new HoeItem(ItemTier.SAPPHIRE, 5.0f,new Item.Properties().group(RandomMod2.ToolTab.instance)).setRegistryName("sapphire_hoe"));
-        event.getRegistry().register(new ShovelItem(ItemTier.SAPPHIRE, 1,5.0f,new Item.Properties()
-                .group(RandomMod2.ToolTab.instance)).setRegistryName("sapphire_shovel"));
-        event.getRegistry().register(new SwordItem(ItemTier.SRUBY, 7, 5.0f,new Item.Properties()
-                .group(RandomMod2.ToolTab.instance)).setRegistryName("ruby_sapphire_sword"));
-        event.getRegistry().register(new PickaxeItem(ItemTier.SRUBY, 1, 5.0f,new Item.Properties()
-                .group(RandomMod2.ToolTab.instance)).setRegistryName("ruby_sapphire_pickaxe"));
-        event.getRegistry().register(new AxeItem(ItemTier.SRUBY,8, 3.0f,new Item.Properties()
-                .group(RandomMod2.ToolTab.instance)).setRegistryName("ruby_sapphire_axe"));
-        event.getRegistry().register(new HoeItem(ItemTier.SRUBY, 5.0f,new Item.Properties().group(RandomMod2.ToolTab.instance)).setRegistryName("ruby_sapphire_hoe"));
-        event.getRegistry().register(new ShovelItem(ItemTier.SRUBY, 1,5.0f,new Item.Properties()
-                .group(RandomMod2.ToolTab.instance)).setRegistryName("ruby_sapphire_shovel"));
-
-        //Armor
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties()
-                .group(RandomMod2.ArmorTab.instance)).setRegistryName("ruby_helmet"));
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties()
-                .group(RandomMod2.ArmorTab.instance)).setRegistryName("ruby_chestplate"));
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties()
-                .group(RandomMod2.ArmorTab.instance)).setRegistryName("ruby_leggings"));
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties()
-                .group(RandomMod2.ArmorTab.instance)).setRegistryName("ruby_boots"));
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.HEAD, new Item.Properties()
-                .group(RandomMod2.ArmorTab.instance)).setRegistryName("sapphire_helmet"));
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.CHEST, new Item.Properties()
-                .group(RandomMod2.ArmorTab.instance)).setRegistryName("sapphire_chestplate"));
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.LEGS, new Item.Properties()
-                .group(RandomMod2.ArmorTab.instance)).setRegistryName("sapphire_leggings"));
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.FEET, new Item.Properties()
-                .group(RandomMod2.ArmorTab.instance)).setRegistryName("sapphire_boots"));
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.RUBYSAPPHIRE, EquipmentSlotType.HEAD, new Item.Properties()
-                .group(RandomMod2.ArmorTab.instance)).setRegistryName("ruby_sapphire_helmet"));
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.RUBYSAPPHIRE, EquipmentSlotType.CHEST, new Item.Properties()
-                .group(RandomMod2.ArmorTab.instance)).setRegistryName("ruby_sapphire_chestplate"));
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.RUBYSAPPHIRE, EquipmentSlotType.LEGS, new Item.Properties()
-                .group(RandomMod2.ArmorTab.instance)).setRegistryName("ruby_sapphire_leggings"));
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.RUBYSAPPHIRE, EquipmentSlotType.FEET, new Item.Properties()
-                .group(RandomMod2.ArmorTab.instance)).setRegistryName("ruby_sapphire_boots"));
-    }
 
     public enum ItemTier implements IItemTier
     {
         RUBY(4, 2000, 15.0f, 6.0f, 10, () ->
         {
-            return Ingredient.fromItems(ItemInit.ruby);
+            return Ingredient.fromItems(ItemInit.RUBY.get());
         }),
 
         SAPPHIRE(4, 2000, 15.0f, 6.0f, 10, () ->
         {
-            return Ingredient.fromItems(ItemInit.sapphire);
+            return Ingredient.fromItems(ItemInit.SAPPHIRE.get());
         }),
 
         SRUBY(4, 2000, 15.0f, 7.0f, 10, () ->
         {
-            return Ingredient.fromItems(ItemInit.ruby_sapphire_gem);
+            return Ingredient.fromItems(ItemInit.RUBY_SAPPHIRE_GEM.get());
         });
 
         private final int harvestLevel;
@@ -222,17 +174,17 @@ public class ItemInit
     {
         RUBY(RandomMod2.MOD_ID + ":ruby", 16, new int[] {4,7,9,4}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,4.0f,()->
         {
-            return Ingredient.fromItems(ItemInit.ruby);
+            return Ingredient.fromItems(ItemInit.RUBY.get());
         }),
 
         SAPPHIRE(RandomMod2.MOD_ID + ":sapphire", 16, new int[] {4,7,9,4}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,4.0f,()->
         {
-            return Ingredient.fromItems(ItemInit.sapphire);
+            return Ingredient.fromItems(ItemInit.SAPPHIRE.get());
         }),
 
         RUBYSAPPHIRE(RandomMod2.MOD_ID + ":ruby_sapphire", 20, new int[] {5,8,10,5}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,5.0f,()->
         {
-            return Ingredient.fromItems(ItemInit.ruby_sapphire_gem);
+            return Ingredient.fromItems(ItemInit.RUBY_SAPPHIRE_GEM.get());
         });
 
 
@@ -300,5 +252,4 @@ public class ItemInit
             return this.toughness;
         }
     }
-
 }
