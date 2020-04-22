@@ -2,6 +2,7 @@ package com.jonathany.randommod2;
 
 import com.jonathany.randommod2.init.*;
 import com.jonathany.randommod2.world.gen.ModOreGen;
+import jdk.nashorn.internal.ir.Block;
 import net.minecraft.item.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -18,6 +19,7 @@ import org.apache.logging.log4j.Logger;
 
 
 @Mod("randommod2")
+@Mod.EventBusSubscriber(modid = RandomMod2.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class RandomMod2
 {
     public static final Logger LOGGER = LogManager.getLogger();
@@ -43,11 +45,11 @@ public class RandomMod2
     {
         final IForgeRegistry<Item> registry = event.getRegistry();
         BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-            final Item.Properties properties= new Item.Properties().group(BlockTab.instance);
+            final Item.Properties properties = new Item.Properties().group(BlockTab.instance);
             final BlockItem blockItem = new BlockItem(block, properties);
             blockItem.setRegistryName(block.getRegistryName());
             registry.register(blockItem);
-    });
+        });
         LOGGER.debug("DONE REGISTERING!");
     }
 
