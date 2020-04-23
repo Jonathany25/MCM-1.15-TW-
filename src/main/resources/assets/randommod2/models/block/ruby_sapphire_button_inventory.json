@@ -1,5 +1,4 @@
-
-{
+ {
   "parent": "block/button_inventory",
   "textures": {
     "texture": "randommod2:blocks/ruby_sapphire_block"
