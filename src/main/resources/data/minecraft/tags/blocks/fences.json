@@ -2,8 +2,8 @@
 {
   "replace": false,
   "values": [
-    "randommod2:block/ruby_fence",
-    "randommod2:block/sapphire_fence",
-    "randommod2:block/ruby_sapphire_fence"
+    "randommod2:ruby_fence",
+    "randommod2:sapphire_fence",
+    "randommod2:ruby_sapphire_fence"
   ]
 }
