@@ -44,7 +44,7 @@ public class BlockInit
     public static final RegistryObject<Block> QUARRY = BLOCKS.register("quarry", () -> new BlockQuarry(Block.Properties.create(Material.IRON).hardnessAndResistance(5,10)
             .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
 
-    //Stairs
+    //Other Blocks
     public static final RegistryObject<Block> RUBY_STAIRS = BLOCKS.register("ruby_stairs", ()-> new StairsBlock(()-> RUBY_BLOCK.get().getDefaultState(), Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)
             .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
     public static final RegistryObject<Block> RUBY_FENCE = BLOCKS.register("ruby_fence", ()-> new FenceBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)
@@ -52,6 +52,22 @@ public class BlockInit
     public static final RegistryObject<Block> RUBY_BUTTON = BLOCKS.register("ruby_button", ()-> new ModWoodButtonBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)
             .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
     public static final RegistryObject<Block> RUBY_PRESSURE_PLATE = BLOCKS.register("ruby_pressure_plate", ()-> new ModPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.create(Material.IRON, MaterialColor.AIR).hardnessAndResistance(5,30)
+            .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> SAPPHIRE_STAIRS = BLOCKS.register("sapphire_stairs", ()-> new StairsBlock(()-> SAPPHIRE_BLOCK.get().getDefaultState(), Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)
+            .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> SAPPHIRE_FENCE = BLOCKS.register("sapphire_fence", ()-> new FenceBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)
+            .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> SAPPHIRE_BUTTON = BLOCKS.register("sapphire_button", ()-> new ModWoodButtonBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)
+            .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> SAPPHIRE_PRESSURE_PLATE = BLOCKS.register("sapphire_pressure_plate", ()-> new ModPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.create(Material.IRON, MaterialColor.AIR).hardnessAndResistance(5,30)
+            .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> RUBY_SAPPHIRE_STAIRS = BLOCKS.register("ruby_sapphire_stairs", ()-> new StairsBlock(()-> RUBY_SAPPHIRE_BLOCK.get().getDefaultState(), Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)
+            .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> RUBY_SAPPHIRE_FENCE = BLOCKS.register("ruby_sapphire_fence", ()-> new FenceBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)
+            .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> RUBY_SAPPHIRE_BUTTON = BLOCKS.register("ruby_sapphire_button", ()-> new ModWoodButtonBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)
+            .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> RUBY_SAPPHIRE_PRESSURE_PLATE = BLOCKS.register("ruby_sapphire_pressure_plate", ()-> new ModPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.create(Material.IRON, MaterialColor.AIR).hardnessAndResistance(5,30)
             .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
 
 

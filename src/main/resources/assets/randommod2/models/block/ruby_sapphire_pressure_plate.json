@@ -1,0 +1,6 @@
+{
+  "parent": "block/pressure_plate_up",
+  "textures": {
+    "texture": "randommod2:blocks/ruby_apphire_block"
+  }
+}

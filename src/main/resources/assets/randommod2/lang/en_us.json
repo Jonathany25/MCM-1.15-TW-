@@ -50,6 +50,10 @@
   "block.randommod2.ruby_stairs": "Ruby Stairs",
   "block.randommod2.ruby_pressure_plate": "Ruby Pressure Plate",
   "block.randommod2.ruby_fence": "Ruby Fence",
+  "block.randommod2.ruby_sapphire_button": "Ruby Sapphire Button",
+  "block.randommod2.ruby_sapphire_stairs": "Ruby Sapphire Stairs",
+  "block.randommod2.ruby_sapphire_pressure_plate": "Ruby Sapphire Pressure Plate",
+  "block.randommod2.ruby_sapphire_fence": "Ruby Sapphire Fence",
 
   //Armor
   "item.randommod2.ruby_helmet": "Ruby Helmet",
