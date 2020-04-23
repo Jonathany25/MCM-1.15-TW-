@@ -3,9 +3,11 @@ package com.jonathany.randommod2.init;
 import com.jonathany.randommod2.RandomMod2;
 import com.jonathany.randommod2.objects.blocks.BlockQuarry;
 import com.jonathany.randommod2.objects.blocks.FloorLight;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
+import com.jonathany.randommod2.objects.blocks.ModPressurePlateBlock;
+import com.jonathany.randommod2.objects.blocks.ModWoodButtonBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
@@ -16,7 +18,7 @@ public class BlockInit
 {
     public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, RandomMod2.MOD_ID);
 
-    //Items
+    //Blocks
     public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", () -> new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)
             .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
     public static final RegistryObject<Block> SAPPHIRE_BLOCK = BLOCKS.register("sapphire_block", () -> new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)
@@ -41,5 +43,17 @@ public class BlockInit
             .harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.GLASS).lightValue(10).slipperiness(1.2f).speedFactor(0f).noDrops()));
     public static final RegistryObject<Block> QUARRY = BLOCKS.register("quarry", () -> new BlockQuarry(Block.Properties.create(Material.IRON).hardnessAndResistance(5,10)
             .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+
+    //Stairs
+    public static final RegistryObject<Block> RUBY_STAIRS = BLOCKS.register("ruby_stairs", ()-> new StairsBlock(()-> RUBY_BLOCK.get().getDefaultState(), Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)
+            .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> RUBY_FENCE = BLOCKS.register("ruby_fence", ()-> new FenceBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)
+            .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> RUBY_BUTTON = BLOCKS.register("ruby_button", ()-> new ModWoodButtonBlock(Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)
+            .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> RUBY_PRESSURE_PLATE = BLOCKS.register("ruby_pressure_plate", ()-> new ModPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.create(Material.IRON, MaterialColor.AIR).hardnessAndResistance(5,30)
+            .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+
+
 
 }

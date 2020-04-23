@@ -1,0 +1,7 @@
+
+{
+  "parent": "block/button_inventory",
+  "textures": {
+    "texture": "randommod2:blocks/sapphire_block"
+  }
+}

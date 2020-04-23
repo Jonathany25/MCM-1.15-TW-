@@ -1,0 +1,6 @@
+{
+  "parent": "block/pressure_plate_down",
+  "textures": {
+    "texture": "randommod2:blocks/sapphire_block"
+  }
+}

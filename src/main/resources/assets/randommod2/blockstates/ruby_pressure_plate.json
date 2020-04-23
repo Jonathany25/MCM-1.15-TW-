@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "powered=false": { "model": "randommod2:block/ruby_pressure_plate" },
+        "powered=true": { "model": "randommod2:block/ruby_pressure_plate_down" }
+    }
+}
