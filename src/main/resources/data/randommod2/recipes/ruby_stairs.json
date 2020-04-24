@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern":
+  [
+    "R  ",
+    "RR ",
+    "RRR"
+  ],
+
+  "key":
+  {
+    "R":
+    {
+      "item": "randommod2:ruby_block"
+    }
+  },
+
+  "result":
+  {
+    "item": "randommod2:ruby_stairs",
+    "count": 8
+  }
+}

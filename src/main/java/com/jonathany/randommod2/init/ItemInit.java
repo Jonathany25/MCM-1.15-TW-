@@ -34,7 +34,8 @@ public class ItemInit
     public static final RegistryObject<Item> OBSIDIAN_ROD = ITEMS.register("obsidian_rod", () -> new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)));
     public static final RegistryObject<Item> REINFORCED_OBSIDIAN_ROD = ITEMS.register("reinforced_obsidian_rod", () -> new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)));
     public static final RegistryObject<Item> PLASTIC_BOTTLE = ITEMS.register("plastic_bottle", () -> new PlasticBottle(new Item.Properties().group(RandomMod2.ItemTab.instance)));
-
+    public static final RegistryObject<Item> FRIENDS_INGOT = ITEMS.register("friends_ingot", () -> new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)));
+    public static final RegistryObject<Item> FRIENDS_DUST = ITEMS.register("friends_dust", () -> new Item(new Item.Properties().group(RandomMod2.ItemTab.instance)));
     //Food
     public static final RegistryObject<Item> BEER = ITEMS.register("beer", () -> new Item(new Item.Properties().group(RandomMod2.ItemTab.instance).food(new Food.Builder().hunger(1).saturation(10f).setAlwaysEdible().meat()
             .effect(new EffectInstance(Effects.NAUSEA,200,1), 0.8f).build())));

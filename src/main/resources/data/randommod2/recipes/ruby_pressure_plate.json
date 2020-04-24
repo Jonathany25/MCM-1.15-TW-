@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern":
+  [
+    "RR"
+  ],
+
+  "key":
+  {
+    "R":
+    {
+      "item": "randommod2:ruby"
+    }
+  },
+
+  "result":
+  {
+    "item": "randommod2:ruby_pressure_plate",
+    "count": 2
+  }
+}

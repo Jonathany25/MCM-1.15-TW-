@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern":
+  [
+    "RSR",
+    "RSR"
+  ],
+
+  "key":
+  {
+    "R":
+    {
+      "item": "randommod2:sapphire_block"
+    },
+    "S":
+    {
+      "item": "randommod2:sapphire"
+    }
+  },
+
+  "result":
+  {
+    "item": "randommod2:sapphire_fence",
+    "count": 6
+  }
+}

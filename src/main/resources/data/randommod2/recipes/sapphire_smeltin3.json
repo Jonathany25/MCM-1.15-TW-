@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "randommod2:nethersapphire_ore"
+    },
+    "result": "randommod2:sapphire",
+    "experience": 1,
+    "cookingtime": 200
+}

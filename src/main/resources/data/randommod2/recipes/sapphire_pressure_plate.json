@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern":
+  [
+    "RR"
+  ],
+
+  "key":
+  {
+    "R":
+    {
+      "item": "randommod2:sapphire"
+    }
+  },
+
+  "result":
+  {
+    "item": "randommod2:sapphire_pressure_plate",
+    "count": 2
+  }
+}

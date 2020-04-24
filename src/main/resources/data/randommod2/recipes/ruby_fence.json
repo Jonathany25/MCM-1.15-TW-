@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern":
+  [
+    "RSR",
+    "RSR"
+  ],
+
+  "key":
+  {
+    "R":
+    {
+      "item": "randommod2:ruby_block"
+    },
+    "S":
+    {
+      "item": "randommod2:ruby"
+    }
+  },
+
+  "result":
+  {
+    "item": "randommod2:ruby_fence",
+    "count": 6
+  }
+}

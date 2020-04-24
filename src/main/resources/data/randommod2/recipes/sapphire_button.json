@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "randommod2:sapphire"
+    }
+  ],
+  "result": {
+    "item": "randommod2:sapphire_button",
+    "count": 1
+  }
+}

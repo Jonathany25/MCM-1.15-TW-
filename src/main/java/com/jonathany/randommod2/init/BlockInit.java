@@ -39,10 +39,17 @@ public class BlockInit
             .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
     public static final RegistryObject<Block> FRIENDS_ORE = BLOCKS.register("friends_ore", () -> new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5,10)
             .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> NETHERFRIENDS_ORE = BLOCKS.register("netherfriends_ore", () -> new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5,10)
+            .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> ENDFRIENDS_ORE = BLOCKS.register("endfriends_ore", () -> new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5,10)
+            .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
     public static final RegistryObject<Block> FLOOR_LIGHT = BLOCKS.register("floor_light", () -> new FloorLight(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0f,10.0f)
             .harvestLevel(2).harvestTool(ToolType.PICKAXE).sound(SoundType.GLASS).lightValue(10).slipperiness(1.2f).speedFactor(0f).noDrops()));
     public static final RegistryObject<Block> QUARRY = BLOCKS.register("quarry", () -> new BlockQuarry(Block.Properties.create(Material.IRON).hardnessAndResistance(5,10)
             .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> FRIENDS_BLOCK = BLOCKS.register("friends_block", () -> new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)
+            .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+
 
     //Other Blocks
     public static final RegistryObject<Block> RUBY_STAIRS = BLOCKS.register("ruby_stairs", ()-> new StairsBlock(()-> RUBY_BLOCK.get().getDefaultState(), Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)

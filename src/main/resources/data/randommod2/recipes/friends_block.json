@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+
+  ],
+  "key": {
+    "#": {
+      "item": "randommod2:friends_ingot"
+    }
+  },
+  "result": {
+    "item": "randommod2:friends_block",
+    "count": 1
+  }
+}

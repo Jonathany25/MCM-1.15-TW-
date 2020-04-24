@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "randommod2:friends_block"
+    }
+  ],
+  "result": {
+    "item": "randommod2:friends_ingot",
+    "count": 9
+  }
+}
