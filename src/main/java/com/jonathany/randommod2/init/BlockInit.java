@@ -49,6 +49,18 @@ public class BlockInit
             .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
     public static final RegistryObject<Block> FRIENDS_BLOCK = BLOCKS.register("friends_block", () -> new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5,30)
             .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> ANNABELLE_BLOCK = BLOCKS.register("annabelle_block", () -> new Block(Block.Properties.create(Material.EARTH).hardnessAndResistance(0.5f,30)
+            .sound(SoundType.GROUND).harvestTool(ToolType.SHOVEL)));
+    public static final RegistryObject<Block> LINDSAY_BLOCK = BLOCKS.register("lindsay_block", () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(0.5f,30)
+            .sound(SoundType.GROUND).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> KEIRA_BLOCK = BLOCKS.register("keira_block", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5f,30)
+            .sound(SoundType.GROUND).harvestLevel(0).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> RAPAEL_BLOCK = BLOCKS.register("rapael_block", () -> new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.5f,30)
+            .sound(SoundType.STONE).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> DYLAN_BLOCK = BLOCKS.register("dylan_block", () -> new Block(Block.Properties.create(Material.EARTH).hardnessAndResistance(0.5f,30)
+            .sound(SoundType.STONE).harvestTool(ToolType.SHOVEL)));
+    public static final RegistryObject<Block> BRIAN_BLOCK = BLOCKS.register("brian_block", () -> new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1.5f,30)
+            .sound(SoundType.STONE).harvestLevel(0).harvestTool(ToolType.PICKAXE)));
 
 
     //Other Blocks

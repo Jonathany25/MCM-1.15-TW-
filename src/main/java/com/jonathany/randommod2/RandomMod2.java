@@ -4,6 +4,8 @@ import com.jonathany.randommod2.init.*;
 import com.jonathany.randommod2.world.gen.ModOreGen;
 import jdk.nashorn.internal.ir.Block;
 import net.minecraft.item.*;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,6 +27,9 @@ public class RandomMod2
     public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "randommod2";
     public static RandomMod2 instance;
+    public static final ResourceLocation BOYS_DIM_TYPE = new ResourceLocation(MOD_ID, "boys_dimension");
+    public static final ResourceLocation GIRLS_DIM_TYPE = new ResourceLocation(MOD_ID, "girls_dimension");
+
 
     public RandomMod2() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -34,6 +39,8 @@ public class RandomMod2
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
         ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
+        BiomeInit.BIOMES.register(modEventBus);
+        DimensionInit.MOD_DIMENSIONS.register(modEventBus);
 
         instance=this;
 
@@ -50,7 +57,13 @@ public class RandomMod2
             blockItem.setRegistryName(block.getRegistryName());
             registry.register(blockItem);
         });
-        LOGGER.debug("DONE REGISTERING!");
+        LOGGER.debug("DONE REGISTERING BLOCKITEM!");
+    }
+
+    @SubscribeEvent
+    public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event)
+    {
+        BiomeInit.registerBiomes();
     }
 
     private void setup(final FMLCommonSetupEvent event)
