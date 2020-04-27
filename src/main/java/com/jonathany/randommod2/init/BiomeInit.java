@@ -20,16 +20,16 @@ public class BiomeInit
                     .waterColor(16724639).waterFogColor(16762304)
                     .            surfaceBuilder(SurfaceBuilder.DEFAULT,
                     new SurfaceBuilderConfig(BlockInit.ANNABELLE_BLOCK.get().getDefaultState(),
-                            BlockInit.KEIRA_BLOCK.get().getDefaultState(),
-                            BlockInit.KEIRA_BLOCK.get().getDefaultState()))
+                            BlockInit.ANNABELLE_BLOCK.get().getDefaultState(),
+                            BlockInit.ANNABELLE_BLOCK.get().getDefaultState()))
             .category(Biome.Category.PLAINS).downfall(0.5f).depth(0.12f).parent(null)));
     public static final RegistryObject<Biome> BOYS_BIOME = BIOMES.register("boys_biome",
             () -> new GirlsBiome(new Biome.Builder().precipitation(Biome.RainType.SNOW).scale(1.2f).temperature(0.5f)
                     .waterColor(16724639).waterFogColor(16762304)
                     .            surfaceBuilder(SurfaceBuilder.DEFAULT,
                             new SurfaceBuilderConfig(BlockInit.DYLAN_BLOCK.get().getDefaultState(),
-                                    BlockInit.BRIAN_BLOCK.get().getDefaultState(),
-                                    BlockInit.BRIAN_BLOCK.get().getDefaultState()))
+                                    BlockInit.DYLAN_BLOCK.get().getDefaultState(),
+                                    BlockInit.DYLAN_BLOCK.get().getDefaultState()))
                     .category(Biome.Category.PLAINS).downfall(0.5f).depth(0.12f).parent(null)));
 
 
@@ -41,6 +41,7 @@ public class BiomeInit
 
     private static void registerBiome(Biome biome, BiomeDictionary.Type... types)
     {
+        //Adds Biome in OW: BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(biome,100));
         BiomeDictionary.addTypes(biome, types);
         BiomeManager.addSpawnBiome(biome);
     }

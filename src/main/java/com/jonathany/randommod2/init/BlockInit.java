@@ -1,10 +1,7 @@
 package com.jonathany.randommod2.init;
 
 import com.jonathany.randommod2.RandomMod2;
-import com.jonathany.randommod2.objects.blocks.BlockQuarry;
-import com.jonathany.randommod2.objects.blocks.FloorLight;
-import com.jonathany.randommod2.objects.blocks.ModPressurePlateBlock;
-import com.jonathany.randommod2.objects.blocks.ModWoodButtonBlock;
+import com.jonathany.randommod2.objects.blocks.*;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -88,6 +85,8 @@ public class BlockInit
             .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
     public static final RegistryObject<Block> RUBY_SAPPHIRE_PRESSURE_PLATE = BLOCKS.register("ruby_sapphire_pressure_plate", ()-> new ModPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, Block.Properties.create(Material.IRON, MaterialColor.AIR).hardnessAndResistance(5,30)
             .sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)));
+    public static final RegistryObject<Block> RAPAEL_CHEST = BLOCKS.register("rapael_chest", ()-> new RapaelChestBlock(Block.Properties.from(RAPAEL_BLOCK.get())));
+    public static final RegistryObject<Block> LINDSAY_CHEST = BLOCKS.register("lindsay_chest", ()-> new LindsayChestBlock(Block.Properties.from(LINDSAY_BLOCK.get())));
 
 
 

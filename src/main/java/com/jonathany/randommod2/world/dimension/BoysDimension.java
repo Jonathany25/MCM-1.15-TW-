@@ -8,6 +8,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.dimension.Dimension;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.gen.ChunkGenerator;
+import net.minecraft.world.gen.ChunkGeneratorType;
+import net.minecraft.world.gen.NetherGenSettings;
 
 import javax.annotation.Nullable;
 

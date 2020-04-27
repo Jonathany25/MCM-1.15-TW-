@@ -11,6 +11,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class DimensionInit
 {
     public static final DeferredRegister<ModDimension> MOD_DIMENSIONS = new DeferredRegister<>(ForgeRegistries.MOD_DIMENSIONS, RandomMod2.MOD_ID);
-    public static final RegistryObject<ModDimension> BOYS_DIM = MOD_DIMENSIONS.register("boys_dimension", ()-> new BoysModDimension());
     public static final RegistryObject<ModDimension> GIRLS_DIM = MOD_DIMENSIONS.register("girls_dimension", ()-> new GirlsModDimension());
+    public static final RegistryObject<ModDimension> BOYS_DIM = MOD_DIMENSIONS.register("boys_dimension", ()-> new BoysModDimension());
 }

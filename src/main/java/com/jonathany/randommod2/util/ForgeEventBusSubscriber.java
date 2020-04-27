@@ -18,9 +18,9 @@ public class ForgeEventBusSubscriber
         {
             DimensionManager.registerDimension(RandomMod2.BOYS_DIM_TYPE, DimensionInit.BOYS_DIM.get(),null,false);
         }
-        if(DimensionType.byName(RandomMod2.BOYS_DIM_TYPE) == null)
+        if(DimensionType.byName(RandomMod2.GIRLS_DIM_TYPE) == null)
         {
-            DimensionManager.registerDimension(RandomMod2.BOYS_DIM_TYPE, DimensionInit.BOYS_DIM.get(),null,true);
+            DimensionManager.registerDimension(RandomMod2.GIRLS_DIM_TYPE, DimensionInit.GIRLS_DIM.get(),null,true);
         }
         RandomMod2.LOGGER.info("DONE REGISTERING DIMS!");
     }
